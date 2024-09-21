@@ -1,0 +1,140 @@
+.header {
+  width: 100%;
+
+  padding: 80px;
+  margin: 2 auto; /* centers the header itself horizontally if needed */
+  color: black;
+
+  background-color: whitesmoke;
+
+  /* Flexbox for centering content inside the header */
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically */
+}
+
+.margin {
+  margin: 10px;
+}
+
+.grid {
+  display: flex;
+
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically */
+}
+.courseButton {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.courseButtonContainer {
+  display: flex;
+
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically */
+}
+
+.aboutParagraphs {
+  width: 100%;
+  padding: 80px;
+  margin: 0 auto; /* centers the header itself horizontally if needed */
+  color: blue;
+  background-color: aqua;
+
+  /* Flexbox for centering content inside the header */
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically */
+
+  border: solid 1px black;
+}
+.aboutHeader {
+  width: 100%;
+  padding: 50px 180px;
+  margin: 0 auto; /* centers the header itself horizontally if needed */
+  color: blue;
+  background-color: aqua;
+
+  /* Flexbox for centering content inside the header */
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically */
+}
+
+.contact-info {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.contact-info h2 {
+  font-size: 1.5em;
+}
+.contact-info p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.container {
+  position: relative;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  transition: opacity 0.5s ease-out; /* Smooth transition for fade */
+}
+.videoWrapper {
+}
+
+.fadeOut {
+  opacity: 0; /* Fades the video out */
+}
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black,
+    -1px 1px 0px black;
+  text-align: center;
+  padding: 30px 20px; /* Ensure some spacing from the top */
+  height: 100vh;
+}
+
+.transcript {
+  display: none;
+}
+
+.cvText {
+  text-align: left;
+  padding: 20px 100px;
+  margin-left: 50px;
+}
+.aboutContainer {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: grey;
+  height: fit-content;
+}
+
+.bachataSection {
+  position: absolute;
+  top: 500px;
+  color: yellow;
+}
