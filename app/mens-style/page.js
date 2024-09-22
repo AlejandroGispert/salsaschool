@@ -21,15 +21,21 @@ export default function salsa() {
             <Typography variant="h3" component="h3" gutterBottom>
               Men’s style
             </Typography>
+            <Image
+              src="/images/livanFlag.jpg"
+              width={700}
+              height={450}
+              alt="Cubansk Salsa"
+              style={{ borderRadius: "8px" }}
+            />
           </Box>
 
           <article lang="no">
             <section>
               <Typography variant="body1">
-                Målet med dette kurset er å utvikle menns dansestilen etter
+                Målet med dette kurset er å utvikle menns dansestil i takt med
                 kubanske rytmer. På denne måten kan både svingene og kroppens
-                bevegelsene skaper en harmonisk og dynamisk samspill a la
-                Cubano.
+                bevegelser skape et harmonisk og dynamisk samspill á la Cubano.
               </Typography>
             </section>
 

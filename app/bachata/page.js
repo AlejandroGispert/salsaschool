@@ -11,23 +11,23 @@ import Typography from "@mui/material/Typography";
 export default function Bachata() {
   const videoRef = useRef(null);
 
-  useEffect(() => {
-    const videoElement = videoRef.current;
+  // useEffect(() => {
+  //   const videoElement = videoRef.current;
 
-    // Pause the video initially
-    videoElement.pause();
+  //   // Pause the video initially
+  //   videoElement.pause();
 
-    // Set the current time to 60 seconds
-    videoElement.currentTime = 60;
+  //   // Set the current time to 60 seconds
+  //   videoElement.currentTime = 60;
 
-    // Play the video
-    videoElement.play();
+  //   // Play the video
+  //   videoElement.play();
 
-    // Cleanup function to pause the video if the component unmounts
-    return () => {
-      videoElement.pause();
-    };
-  }, []);
+  //   // Cleanup function to pause the video if the component unmounts
+  //   return () => {
+  //     videoElement.pause();
+  //   };
+  // }, []);
 
   return (
     <div className={styles.container}>
@@ -42,6 +42,7 @@ export default function Bachata() {
           className={styles.backgroundVideo}
           autoPlay
           muted
+          loop
           playsInline
           title="video dancing bachata"
           aria-label="video dancing bachata"
@@ -67,9 +68,12 @@ export default function Bachata() {
               <Typography variant="body1">
                 Bachata er en stil med sosial dans fra Den Dominikanske
                 republikk som nå danses over hele verden. Det er forbundet med
-                bachatamusikk. Elegant og sensuell. Den regnes som en avart av
-                bolero, med innflytelse fra afrikansk musikk og andre
-                musikkstiler som son cubano, merengue og cha-cha-cha.
+                bachatamusikk.
+              </Typography>
+              <Typography variant="body1">
+                Elegant og sensuell. Den regnes som en avart av bolero, med
+                innflytelse fra afrikansk musikk og andre musikkstiler som son
+                cubano, merengue og cha-cha-cha.
               </Typography>
             </section>
 

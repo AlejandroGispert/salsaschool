@@ -43,14 +43,13 @@ export default function Navbar() {
         {[
           "Home",
           "Pricing",
-          "About",
-          "Media",
-          "Contact",
-          "Jazz og moderne dans",
+          "Salsa Cubana",
+          "Bachata",
           "Mens style",
           "Ladies style",
-          "Bachata",
-          "Salsa Cubana",
+          "Media",
+          "About",
+          "Contact",
         ].map((text) => (
           <ListItem button key={text}>
             <Link href={`/${text.toLowerCase().replace(/\s+/g, "-")}`} passHref>
@@ -88,8 +87,13 @@ export default function Navbar() {
               </Link>
             </Button>
             <Button color="inherit" sx={{ mx: 1 }}>
-              <Link href="/about" passHref>
-                About
+              <Link href="/salsa-cubana" passHref>
+                Salsa
+              </Link>
+            </Button>
+            <Button color="inherit" sx={{ mx: 1 }}>
+              <Link href="/bachata" passHref>
+                Bachata
               </Link>
             </Button>
             <Button color="inherit" sx={{ mx: 1 }}>

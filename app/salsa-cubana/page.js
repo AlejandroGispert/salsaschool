@@ -14,19 +14,26 @@ export default function salsa() {
         <meta name="description" content="Cubansk salsadans informasjon" />
         <meta charSet="UTF-8" />
       </Head>
-
+      <div className={styles.videoWrapper}>
+        <video
+          className={styles.backgroundVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          title="video dancing salsa"
+          aria-label="video dancing salsa"
+          poster="/images/salsa-dancing.svg" // Optimized thumbnail image
+        >
+          <source src="/videos/promo-salsa-class.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <main className={styles.main}>
         <Container maxWidth="md">
-          <Box sx={{ textAlign: "center", mb: 4 }}>
-            <Image
-              src="/images/salsa-dancing.svg"
-              width={700}
-              height={400}
-              alt="Cubansk Salsa"
-              style={{ borderRadius: "8px" }}
-            />
-            <Typography variant="h3" component="h3" gutterBottom>
-              Cubansk Salsadans
+          <Box className={styles.content} sx={{ textAlign: "center", mb: 4 }}>
+            <Typography variant="h5" component="h3" gutterBottom>
+              Cubansk Salsadans (Casino)
             </Typography>
           </Box>
 
@@ -90,6 +97,13 @@ export default function salsa() {
               <Typography variant="body1">Ekte Cubano</Typography>
             </section>
           </article>
+          <Image
+            src="/images/salsa-dancing.svg"
+            width={700}
+            height={400}
+            alt="Cubansk Salsa"
+            style={{ borderRadius: "8px" }}
+          />
         </Container>
       </main>
     </div>

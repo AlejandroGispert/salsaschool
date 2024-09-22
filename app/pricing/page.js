@@ -21,7 +21,7 @@ const courses = [
   },
   {
     header: "Student",
-    title: "under 21",
+    title: "under 20",
     price: "kr.790",
     image: "/icons/student.svg",
   },

@@ -21,6 +21,13 @@ export default function salsa() {
             <Typography variant="h3" component="h3" gutterBottom>
               Ladystyling
             </Typography>
+            <Image
+              src="/images/ladyStyling.webp"
+              width={450}
+              height={450}
+              alt="Ladystyling salsa style"
+              style={{ borderRadius: "8px" }}
+            />
           </Box>
 
           <article lang="no">
