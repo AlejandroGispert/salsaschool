@@ -14,6 +14,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
+import styles from "../page.module.css";
 
 export default function Navbar() {
   // State to control drawer
@@ -77,7 +78,12 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            className={styles.title}
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1 }}
+          >
             <strong>Salsa Casino</strong> - Salsaskolen i Drammen
           </Typography>
           <Box sx={{ display: { xs: "none", md: "block" } }}>

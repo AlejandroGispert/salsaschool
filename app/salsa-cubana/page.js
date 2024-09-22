@@ -98,6 +98,7 @@ export default function salsa() {
             </section>
           </article>
           <Image
+            className={styles.stylingPics}
             src="/images/salsa-dancing.svg"
             width={700}
             height={400}

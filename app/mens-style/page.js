@@ -22,6 +22,7 @@ export default function salsa() {
               Men’s style
             </Typography>
             <Image
+              className={styles.stylingPics}
               src="/images/livanFlag.jpg"
               width={700}
               height={450}

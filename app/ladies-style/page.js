@@ -22,6 +22,7 @@ export default function salsa() {
               Ladystyling
             </Typography>
             <Image
+              className={styles.stylingPics}
               src="/images/ladyStyling.webp"
               width={450}
               height={450}
