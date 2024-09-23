@@ -9,7 +9,7 @@ import styles from "../page.module.css";
 
 export default function About() {
   return (
-    <Container maxWidth="md" className={styles.header}>
+    <Container maxWidth="md" className={styles.aboutAddWhenResponsive}>
       <Box
         sx={{ textAlign: "center", my: 4, margin: 4 }}
         className={styles.header}

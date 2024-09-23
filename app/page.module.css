@@ -216,4 +216,19 @@
   .title {
     font-size: medium;
   }
+  .aboutAddWhenResponsive {
+    width: 100%;
+
+    padding: 80px;
+    margin: 2 auto; /* centers the header itself horizontally if needed */
+    color: black;
+
+    background-color: whitesmoke;
+
+    /* Flexbox for centering content inside the header */
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    align-items: center; /* center items horizontally */
+    justify-content: center; /* center items vertically */
+  }
 }
