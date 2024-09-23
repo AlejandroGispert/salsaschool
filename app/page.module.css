@@ -14,7 +14,7 @@
   justify-content: center; /* center items vertically */
 }
 .navbar {
-  background-color: #07bcf9;
+  background-color: #0c2544;
   color: white;
 }
 .margin {
@@ -112,8 +112,8 @@
   position: relative;
   z-index: 1;
   color: white;
-  text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black,
-    -1px 1px 0px black;
+  text-shadow: 1px 1px 0px #ab1225, -1px -1px 0px #ab1225, 1px -1px 0px #ab1225,
+    -1px 1px 0px #ab1225;
   text-align: center;
   padding: 30px 20px; /* Ensure some spacing from the top */
   height: 100vh;

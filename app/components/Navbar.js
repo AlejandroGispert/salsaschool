@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -33,6 +33,7 @@ export default function Navbar() {
   };
 
   // Drawer content (Menu Items)
+
   const list = () => (
     <Box
       className={styles.navbar}
@@ -67,7 +68,7 @@ export default function Navbar() {
   return (
     <>
       {/* AppBar for the Navbar */}
-      <AppBar position="static" className={styles.navbar}>
+      <AppBar position="static" sx={{ backgroundColor: "#0c2544" }}>
         <Toolbar>
           {/* Hamburger Icon Button */}
           <IconButton
