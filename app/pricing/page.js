@@ -34,7 +34,7 @@ const courses = [
   {
     header: "Drop in",
     title: "per class",
-    price: "kr.180",
+    price: "kr.200",
     image: "icons/jazmodern.svg",
   },
 ];

@@ -53,8 +53,8 @@ export default function Home() {
           aria-label="Promo video of Salsa Casino Dans school"
           poster="/images/thumbnail.jpg" // Optimized thumbnail image
         >
-          <source src="/videos/promo.mp4" type="video/mp4" />
-          <source src="/videos/promo.webm" type="video/webm" />{" "}
+          <source src="/videos/promo-short.mp4" type="video/mp4" />
+          <source src="/videos/promo-short.webm" type="video/webm" />{" "}
           {/* Fallback format */}
           Your browser does not support the video tag.
         </video>
