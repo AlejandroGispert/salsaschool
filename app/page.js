@@ -62,7 +62,9 @@ export default function Home() {
 
       {/* Main Content */}
       <Box className={styles.content}>
-        <h1>Welcome to Salsa Casino Dans</h1>
+        <h1 style={{ fontFamily: "Salsa, sans-serif" }}>
+          Welcome to Salsa Casino Dans
+        </h1>
       </Box>
 
       <Box className={styles.transcript}>

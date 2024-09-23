@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Salsa";
+  src: url("/fonts/salsa/Salsa-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header {
   width: 100%;
 
@@ -109,6 +116,7 @@
   opacity: 0; /* Fades the video out */
 }
 .content {
+  font-family: "Salsa", sans-serif;
   position: relative;
   z-index: 1;
   color: white;
