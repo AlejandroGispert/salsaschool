@@ -5,7 +5,7 @@
   margin: 2 auto; /* centers the header itself horizontally if needed */
   color: black;
 
-  /* background-color: #07bcf9; */
+  background-color: whitesmoke;
 
   /* Flexbox for centering content inside the header */
   display: flex;
