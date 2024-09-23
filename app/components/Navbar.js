@@ -66,7 +66,7 @@ export default function Navbar() {
   return (
     <>
       {/* AppBar for the Navbar */}
-      <AppBar position="static" sx={{ backgroundColor: "#fff", color: "#000" }}>
+      <AppBar position="static" className={styles.navbar}>
         <Toolbar>
           {/* Hamburger Icon Button */}
           <IconButton

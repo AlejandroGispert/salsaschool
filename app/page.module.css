@@ -5,7 +5,7 @@
   margin: 2 auto; /* centers the header itself horizontally if needed */
   color: black;
 
-  background-color: #07bcf9;
+  /* background-color: #07bcf9; */
 
   /* Flexbox for centering content inside the header */
   display: flex;
@@ -13,7 +13,10 @@
   align-items: center; /* center items horizontally */
   justify-content: center; /* center items vertically */
 }
-
+.navbar {
+  background-color: #07bcf9;
+  color: #000;
+}
 .margin {
   margin: 10px;
 }
@@ -87,8 +90,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #07bcf9;
-  z-index: -2;
 }
 
 .backgroundVideo {
