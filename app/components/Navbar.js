@@ -35,6 +35,7 @@ export default function Navbar() {
   // Drawer content (Menu Items)
   const list = () => (
     <Box
+      className={styles.navbar}
       sx={{ width: 250 }}
       role="presentation"
       onClick={toggleDrawer(false)}
@@ -52,7 +53,7 @@ export default function Navbar() {
           "About",
           "Contact",
         ].map((text) => (
-          <ListItem button key={text}>
+          <ListItem sx={{ marginTop: 4.75 }} button key={text}>
             <Link href={`/${text.toLowerCase().replace(/\s+/g, "-")}`} passHref>
               <ListItemText primary={text} />
             </Link>
@@ -127,7 +128,12 @@ export default function Navbar() {
       </AppBar>
 
       {/* Drawer component for mobile menu */}
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer
+        // className={styles.navbar}
+        anchor="left"
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+      >
         {list()}
       </Drawer>
     </>
