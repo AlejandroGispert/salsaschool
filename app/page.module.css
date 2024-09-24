@@ -186,7 +186,9 @@
   align-items: center;
   gap: 3rem; /* Space between the words */
 }
-
+.title {
+  font-family: "Salsa", sans-serif;
+}
 @media screen and (max-width: 430px) {
   .backgroundVideo {
     width: 100vw;

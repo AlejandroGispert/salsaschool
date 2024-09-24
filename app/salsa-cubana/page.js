@@ -33,7 +33,7 @@ export default function salsa() {
         <Container maxWidth="md">
           <Box className={styles.content} sx={{ textAlign: "center", mb: 4 }}>
             <Typography variant="h5" component="h3" gutterBottom>
-              Cubansk Salsadans (Casino)
+              Cuban Salsa Dance (Casino)
             </Typography>
           </Box>
 
