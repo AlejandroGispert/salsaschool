@@ -1,40 +1,33 @@
 "use client";
-import * as React from "react";
+
+import * as React, { useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "../src/theme";
 import { appWithTranslation } from "next-i18next";
 import { Salsa } from "@next/font/google"; // Import the Salsa font
-import { faro } from "@grafana/faro-react";
-import { matchRoutes } from "next/navigation";
+import { initializeFaro, getWebInstrumentations } from "@grafana/faro-react"; // Correct imports for Grafana Faro
+import { TracingInstrumentation } from "@grafana/faro-web-tracing"; // Import tracing instrumentation
+import { useRouter } from "next/router"; // Use Next.js router
+
 // Configure the Salsa font
-import { useRouter } from "next/router";
 const salsa = Salsa({
-  weight: ["400"], // You can specify weights as needed
+  weight: ["400"], // Specify weights
   subsets: ["latin"], // Specify the subset you need
 });
 
+// Initialize Faro
 const faro = initializeFaro({
-  url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/6c120f88f09c6db81207ed1aa0aaf357",
+  url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/6c120f88f09c6db81207ed1aa0aaf357", // Your Grafana Faro instance URL
   app: {
-    name: "salsaCasinoDans",
-    version: "1.0.0",
-    environment: "production",
+    name: "salsaCasinoDans", // App name
+    version: "1.0.0", // App version
+    environment: "production", // Environment (e.g., production)
   },
-
   instrumentations: [
-    // Mandatory, omits default instrumentations otherwise.
-    ...getWebInstrumentations(),
-
-    // Tracing package to get end-to-end visibility for HTTP requests.
-    new TracingInstrumentation(),
-
-    // React integration for React applications.
-    new ReactIntegration({
-      router: createReactRouterV6DataOptions({
-        matchRoutes,
-      }),
-    }),
+    ...getWebInstrumentations(), // Web instrumentations for page load, errors, etc.
+    new TracingInstrumentation(), // Tracing instrumentation for capturing HTTP requests
+    // React integration can be added here, if needed.
   ],
 });
 
@@ -42,9 +35,15 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    // Function to handle route changes
     const handleRouteChange = (url) => {
       faro.api.pushEvent("page_view", { url });
     };
+
+    // Push the initial page view
+    faro.api.pushEvent("page_view", { url: window.location.href });
+
+    // Listen for route changes and push events
     router.events.on("routeChangeComplete", handleRouteChange);
 
     // Cleanup the event listener when the component unmounts

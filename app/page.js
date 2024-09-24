@@ -51,7 +51,7 @@ export default function Home() {
           playsInline
           title="Promo video of Salsa Casino Dans school"
           aria-label="Promo video of Salsa Casino Dans school"
-          poster="/images/thumbnail.jpg" // Optimized thumbnail image
+          poster="/images/thumbnail.png" // Optimized thumbnail image
         >
           <source src="/videos/promo-short.mp4" type="video/mp4" />
           <source src="/videos/promo-short.webm" type="video/webm" />{" "}
