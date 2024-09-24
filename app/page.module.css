@@ -178,12 +178,13 @@
   transform: scale(1.5);
 }
 .homeTextFrontContainer {
-  font-size: 2rem; /* Base font size for the container */
+  margin-top: 200px;
+  font-size: 6rem; /* Base font size for the container */
   font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* Space between the words */
+  gap: 3rem; /* Space between the words */
 }
 
 @media screen and (max-width: 430px) {
