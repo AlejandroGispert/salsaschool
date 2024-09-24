@@ -68,7 +68,10 @@ export default function Navbar() {
   return (
     <>
       {/* AppBar for the Navbar */}
-      <AppBar position="static" sx={{ backgroundColor: "#0c2544" }}>
+      <AppBar
+        position="static"
+        sx={{ background: "linear-gradient(to right, #ab1225, #0c2544)" }}
+      >
         <Toolbar>
           {/* Hamburger Icon Button */}
           <IconButton

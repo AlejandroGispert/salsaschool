@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-
+import AnimatedText from "./components/AnimatedText";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -62,9 +62,8 @@ export default function Home() {
 
       {/* Main Content */}
       <Box className={styles.content}>
-        <h1 style={{ fontFamily: "Salsa, sans-serif" }}>
-          Welcome to Salsa Casino Dans
-        </h1>
+        <h1 style={{ fontFamily: "Salsa, sans-serif" }}>Welcome to</h1>
+        <AnimatedText />
       </Box>
 
       <Box className={styles.transcript}>
