@@ -15,7 +15,9 @@ export default function Footer() {
       }}
     >
       <Container maxWidth="sm">
-        <Typography variant="body1">Salsa Casino Dans Norway</Typography>
+        <Typography variant="body1">
+          Salsa Casino Dance School & Academy Norway
+        </Typography>
         <Typography variant="body2" color="text.secondary">
           {"© "}
           {new Date().getFullYear()} created by Alejandro Gispert. All rights

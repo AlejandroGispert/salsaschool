@@ -16,42 +16,51 @@ const salsa = Salsa({
   subsets: ["latin"], // Specify the subset you need
 });
 
-// Initialize Faro
-const faro = initializeFaro({
-  url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/6c120f88f09c6db81207ed1aa0aaf357", // Your Grafana Faro instance URL
-  app: {
-    name: "salsaCasinoDans", // App name
-    version: "1.0.0", // App version
-    environment: "production", // Environment (e.g., production)
-  },
-  instrumentations: [
-    ...getWebInstrumentations(), // Web instrumentations for page load, errors, etc.
-    new TracingInstrumentation(), // Tracing instrumentation for capturing HTTP requests
-    // React integration can be added here, if needed.
-  ],
-});
+let faro;
+
+if (typeof window !== "undefined") {
+  // Initialize Faro only on the client-side
+  faro = initializeFaro({
+    url: "https://faro-collector-prod-eu-north-0.grafana.net/collect/6c120f88f09c6db81207ed1aa0aaf357", // Your Grafana Faro instance URL
+    app: {
+      name: "salsaCasinoDans", // App name
+      version: "1.0.0", // App version
+      environment: "production", // Environment (e.g., production)
+    },
+    instrumentations: [
+      ...getWebInstrumentations(), // Web instrumentations for page load, errors, etc.
+      new TracingInstrumentation(), // Tracing instrumentation for capturing HTTP requests
+    ],
+  });
+}
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    if (!faro) {
+      console.log("Faro is not initialized");
+      return;
+    }
+  
+    // Push initial page view
+    const initialUrl = window.location.href;
+    console.log("Pushing initial page view:", initialUrl);
+    faro.api.pushEvent("page_view", { url: initialUrl });
+  
     // Function to handle route changes
     const handleRouteChange = (url) => {
+      console.log("Pushing route change event:", url);
       faro.api.pushEvent("page_view", { url });
     };
-
-    // Push the initial page view
-    faro.api.pushEvent("page_view", { url: window.location.href });
-
-    // Listen for route changes and push events
+  
     router.events.on("routeChangeComplete", handleRouteChange);
-
-    // Cleanup the event listener when the component unmounts
+  
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router]);
-
+  
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

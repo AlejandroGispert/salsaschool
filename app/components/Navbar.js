@@ -89,7 +89,7 @@ export default function Navbar() {
             component="div"
             sx={{ flexGrow: 1 }}
           >
-            <strong>Salsa Casino</strong> - Salsaskolen i Drammen
+            <strong>Salsa Casino Dance</strong> - School & Academy
           </Typography>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Button color="inherit" sx={{ mx: 1 }}>

@@ -43,7 +43,7 @@ export default function AnimatedText() {
           activeWord === "dans" ? styles.active : ""
         }`}
       >
-        Dans
+        Dance
       </span>
     </div>
   );
